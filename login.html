@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="fontawesome/css/brands.css"> -->
+    <link rel="stylesheet" href="fontawesome/css/solid.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+    <!-- <link rel="stylesheet" href="css/font.css"> -->
+    <link rel="stylesheet" href="css/log.css">
+  
+    
+</head>
+<body>
+    <div class="logo">
+        <img src="img/logo.png" alt="Vecura Logo">
+        <div class="banner_img">
+            <img class="spin_img1" src="img/cs_banner_bg3.png" alt="background image">
+        </div>
+    </div>
+      
+    <img class="wave" src="img/image.png" alt="background image">
+    <img class="banner spin_img2" src="img/cs_banner_bg1.1.png" alt="banner image">
+   
+
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="pills nav-link active" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="true">Login</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-mobile-tab" data-bs-toggle="pill" data-bs-target="#pills-mobile" type="button" role="tab" aria-controls="pills-mobile" aria-selected="false">Mobile Login</button>
+                </li>
+            </ul>
+            <div class="col-md-12 col-sm-9">
+                <div class="tab-content mt-5" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab" tabindex="0">
+                    <div class="outer-container"> 
+                        <div class="form-container">
+                            <div class="login" id="login">
+                                <div class="form-icon"><i class="fa fa-user"></i></div>
+                                <h3 class="title">Login</h3>
+                                <div class="alert alert-danger" id="alert" role="alert">
+                                    Invalid username and password.
+                                </div>
+                                <div class="alert alert-success" id="alert" role="alert">
+                                    Login Success.
+                                </div>
+                                <form class="form-horizontal needs-validation" novalidate>
+                                    <div class="form-group position-relative">
+                                        <label for="email">Username</label>
+                                        <input class="form-control input-lg" type="text" placeholder="Username" required="">
+                                        <i class="fa fa-user position-absolute"></i>
+
+                                        <div class="invalid-feedback">
+                                            Please enter your Username.
+                                        </div>
+                                    </div>
+                          
+                                    
+                                    <div class="form-group position-relative">
+                                        <label for="password">Password</label>
+                                        <input class="form-control input-lg" type="password" placeholder="Password" required="">
+                                        <i class="fa fa-lock position-absolute"></i>
+
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" id="loginbtn" class="btn btn-default">Login</button>
+    
+                                    <div class="form-ftr">
+                                        <div class="rm">
+                                            <!-- <input type="checkbox" name="remember" id="remember">
+                                            <label for="remember">Remember me</label> -->
+                                            <div class="w-100 d-flex justify-content-start">
+                                                <div class="checkbox chkbox">
+                                                    <input type="checkbox" id="cbx" style="display:none"/>
+                                                    <label for="cbx" class="toggle"><span></span></label>
+                                                    <label for="cbx" style="margin-left: 10px;cursor:pointer;color: #102770;font-weight: bold;">Remember me</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a class="fgt-pwd" id="fgt-pwd" href="#">Forgot Password ?</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <div class="fgtpwd">
+                                <div class="fgtpwd_body" id="fgtpwd">
+                                    <div class="mb-4">
+                                    <p class="mb-2 inbox" id="msg">Check your inbox*</p>
+                                    <h5>Forgot Password?</h5>
+                                    <p class="mb-2">Enter your registered email ID to reset the password
+                                    </p>
+                                    </div>
+                                    <form class="form-horizontal needs-validation" novalidate>
+                                        <div class="form-group position-relative">
+                                            <label for="password">Email</label>
+                                            <input class="form-control input-lg" type="email" placeholder="Email" required="">
+                                            <i class="fa fa-envelope position-absolute"></i>
+
+                                            <div class="invalid-feedback">
+                                                Please enter your email.
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 d-grid">
+                                            <button  type="submit" id="rpwd" class="btn btn-default">
+                                            Reset Password
+                                            </button>
+                                        </div>
+                                        <span>Back to <a id="log" href="#login" style="color: green !important; font-weight: bold;">Login</a></span>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-mobile" role="tabpanel" aria-labelledby="pills-mobile-tab" tabindex="0">
+                    <div class="outer-container"> 
+                        <div class="form-container">
+                            <div class="form-icon"><i class="fa fa-phone"></i></div>
+                            <h3 class="title">Mobile Login</h3>
+                            <form class="form-horizontal needs-validation" novalidate>
+                                <div class="form-group position-relative">
+                                    <label>Mobile Number</label>
+                                    <input class="form-control input-lg" type="text" placeholder="Mobile number" required="">
+                                    <i class="fa fa-phone position-absolute"></i>
+
+                                    <div class="invalid-feedback">
+                                        Please enter your mobile number.
+                                    </div>
+                                </div>
+                                <button type="submit" id="getotp" class="btn btn-default">Get Otp</button>
+    
+    
+                                <div id="otp"><br>
+                                    <form class="form-horizontal needs-validation" novalidate>
+                              
+                                        <div class="form-group position-relative">
+                                            <label>Otp</label>
+                                            <input class="form-control input-lg" type="text" placeholder="Otp" required="">
+                                            <i class="fa fa-key position-absolute"></i>
+        
+                                            <div class="invalid-feedback">
+                                                Please enter the otp.
+                                            </div>
+                                        </div>
+                                        <div class="btnwrap">
+                                            <button type="submit" class="btn btn1 btn-default">Validate</button>
+                                            <button class="btn btn1 btn-default" type="button">Resend OTP</button>
+                                        </div>
+                                    </form>   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+ 
+    <script>
+
+        const btn = document.getElementById('getotp');
+        const fgt = document.getElementById('fgt-pwd');
+        const tab = document.getElementById('login');
+        const box = document.getElementById('otp');
+        const fgtbox = document.getElementById('fgtpwd');
+        const ret = document.getElementById('log');
+        const tabbox = document.getElementById('login');
+        const rpwd = document.getElementById('rpwd');
+        const msg = document.getElementById('msg');
+        const alert = document.getElementById('alert');
+        const logbtn = document.getElementById('loginbtn');
+    
+        btn.addEventListener('click', () => {
+        //  hide button
+        btn.style.display = 'none';
+    
+        //  show div
+       
+        box.style.display = 'block';
+        });
+    
+        /*******************forgot pwd box***********************/
+    
+        fgt.addEventListener('click', () => {
+        //  hide button
+        tab.style.display = 'none';
+    
+        //  show div
+     
+        fgtbox.style.display = 'block';
+        });
+    
+        /*********************return to login*********************/
+    
+
+        ret.addEventListener('click', () => 
+        {
+        // hide button
+        fgtbox.style.display = 'none';
+    
+        //show div
+        tabbox.style.display = 'block';
+        
+        });
+    
+        /*********chek your inbox msg***********/
+       
+        rpwd.addEventListener('click', () => {
+        msg.style.display = 'block';
+        });
+        
+        /*************alert msg****************/
+
+        logbtn.addEventListener('click', () => {
+        alert.style.display = 'block';
+        });
+
+
+        // JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+
+</body>
+</html>
